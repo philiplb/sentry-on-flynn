@@ -24,7 +24,7 @@ SENTRY_USE_BIG_INTS = True
 # Note: This will be reported back to getsentry.com as the point of contact. See
 # the beacon documentation for more information. This **must** be a string.
 
-SENTRY_OPTIONS['system.admin-email'] = os.environ.get('SENTRY_ADMIN_EMAIL', '')
+SENTRY_OPTIONS['system.admin-email'] = os.environ.get('SENTRY_ADMIN_EMAIL', 'admin@example.com')
 
 # Instruct Sentry that this install intends to be run by a single organization
 # and thus various UI optimizations should be enabled.
@@ -143,7 +143,8 @@ SENTRY_FILESTORE_OPTIONS = {
 SENTRY_OPTIONS['system.url-prefix'] = os.environ['SENTRY_URL_PREFIX']
 
 SENTRY_WEB_HOST = '0.0.0.0'
-SENTRY_WEB_PORT = int(os.environ['PORT'])
+SENTRY_WEB_PORT = int(os.environ.get('PORT', '8080'))
+
 SENTRY_WEB_OPTIONS = {
     'secure_scheme_headers': {'X-FORWARDED-PROTO': 'https'},
     'worker_class': 'gevent',
@@ -163,6 +164,11 @@ if 'SENDGRID_USERNAME' in os.environ:
     SENTRY_OPTIONS['mail.host'] = 'smtp.sendgrid.net'
     SENTRY_OPTIONS['mail.username'] = os.environ['SENDGRID_USERNAME']
     SENTRY_OPTIONS['mail.password'] = os.environ['SENDGRID_PASSWORD']
+else:
+    SENTRY_OPTIONS['mail.host'] = 'localhost'
+    SENTRY_OPTIONS['mail.username'] = 'root'
+    SENTRY_OPTIONS['mail.password'] = 'password'
+
 SENTRY_OPTIONS['mail.port'] = 587
 SENTRY_OPTIONS['mail.use-tls'] = True
 

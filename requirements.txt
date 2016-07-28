@@ -80,7 +80,7 @@ statsd==3.1               # via sentry
 toronado==0.0.7           # via sentry
 ua-parser==0.7.1          # via sentry
 urllib3==1.14             # via sentry
-uwsgi==2.0.13.1           # via sentry
+twisted==16.3.0
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:
