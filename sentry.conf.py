@@ -130,10 +130,13 @@ SENTRY_TSDB = 'sentry.tsdb.redis.RedisTSDB'
 # Any Django storage backend is compatible with Sentry. For more solutions see
 # the django-storages package: https://django-storages.readthedocs.org/en/latest/
 
-SENTRY_FILESTORE = 'django.core.files.storage.FileSystemStorage'
-SENTRY_FILESTORE_OPTIONS = {
-    'location': '/tmp/sentry-files',
-}
+SENTRY_FILESTORE = 'storages.backends.s3boto.S3BotoStorage'
+SENTRY_FILESTORE_OPTIONS = {}
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_DEFAULT_ACL = 'private'
 
 ##############
 # Web Server #
@@ -249,8 +252,8 @@ TWITTER_CONSUMER_SECRET = os.environ.get('TWITTER_CONSUMER_SECRET')
 FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')
 FACEBOOK_API_SECRET = os.environ.get('FACEBOOK_API_SECRET')
 
-GOOGLE_OAUTH2_CLIENT_ID = os.environ.get('GOOGLE_OAUTH2_CLIENT_ID')
-GOOGLE_OAUTH2_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH2_CLIENT_SECRET')
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')
 
 GITHUB_APP_ID = os.environ.get('GITHUB_APP_ID')
 GITHUB_API_SECRET = os.environ.get('GITHUB_API_SECRET')
