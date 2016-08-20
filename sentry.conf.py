@@ -168,9 +168,9 @@ if 'SENDGRID_USERNAME' in os.environ:
     SENTRY_OPTIONS['mail.username'] = os.environ['SENDGRID_USERNAME']
     SENTRY_OPTIONS['mail.password'] = os.environ['SENDGRID_PASSWORD']
 else:
-    SENTRY_OPTIONS['mail.host'] = 'localhost'
-    SENTRY_OPTIONS['mail.username'] = 'root'
-    SENTRY_OPTIONS['mail.password'] = 'password'
+    SENTRY_OPTIONS['mail.host'] = os.environ.get('SENTRY_MAIL_HOST', 'localhost')
+    SENTRY_OPTIONS['mail.username'] = os.environ.get('SENTRY_MAIL_USERNAME', 'root')
+    SENTRY_OPTIONS['mail.password'] = os.environ.get('SENTRY_MAIL_PASSWORD', 'password')
 
 SENTRY_OPTIONS['mail.port'] = 587
 SENTRY_OPTIONS['mail.use-tls'] = True
