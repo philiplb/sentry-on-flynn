@@ -20,9 +20,9 @@ flynn run sentry --config=sentry.conf.py createuser
 flynn scale worker=1 beat=1
 ```
 
-# In Case of Upgrade
+## Upgrading
 
-This is how you run the needed DB migrations after you have upgraded Sentry via a newer version of this repository.
+After you have upgraded Sentry via a newer version of this repository, run the database migrations with this command:
 
 ```text
 flynn run sentry --config=sentry.conf.py upgrade
