@@ -73,6 +73,7 @@ requests[security]==2.10.0  # via sentry
 selenium==2.53.6          # via sentry
 sentry-auth-google==0.1.0
 sentry-github==0.1.2
+sentry-jira==0.8.0
 sentry==8.7.0
 setproctitle==1.1.10      # via sentry
 simplejson==3.8.2         # via sentry
