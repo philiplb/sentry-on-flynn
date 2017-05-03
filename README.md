@@ -9,7 +9,7 @@ flynn resource add postgres
 
 flynn limit set slugbuilder memory=4GB
 
-flynn env set SECRET_KEY=$(openssl rand -hex 32) SENTRY_URL_PREFIX=https://sentry.mycluster.com
+flynn env set SECRET_KEY=$(openssl rand -hex 32) SENTRY_URL_PREFIX=https://sentry.demo.localflynn.com/
 
 git push flynn master
 
