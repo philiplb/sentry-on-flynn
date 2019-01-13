@@ -12,7 +12,9 @@ boto3==1.4.1              # via sentry
 boto==2.43.0
 botocore==1.4.69          # via boto3, s3transfer, sentry
 celery==3.1.18            # via sentry
-cffi==1.8.3               # via cryptography, libsourcemap, symsynd
+certifi==2018.11.29       # via requests
+cffi==1.8.3               # via cryptography, milksnake
+chardet==3.0.4            # via requests
 click==6.6                # via sentry
 contextlib2==0.5.4        # via raven
 cryptography==1.5.2       # via pyopenssl, python-u2flib-server, requests
@@ -41,15 +43,15 @@ idna==2.6                 # via cryptography, requests
 ipaddress==1.0.17         # via cryptography, sentry
 jmespath==0.9.0           # via boto3, botocore
 kombu==3.0.35             # via celery, sentry
-libsourcemap==0.7.2       # via sentry
 loremipsum==1.0.5         # via sentry
 lxml==3.6.4               # via sentry, toronado
+milksnake==0.1.5          # via symbolic
 mmh3==2.3.1               # via sentry
 mock==1.0.1               # via exam, sentry
 ndg-httpsclient==0.4.2
 oauth2==1.9.0.post1       # via sentry
 oauthlib==2.0.0           # via requests-oauthlib
-percy==0.4.5
+percy==0.4.5              # via sentry
 petname==2.0              # via sentry
 pillow==3.2.0             # via sentry
 progressbar2==3.10.1      # via sentry
@@ -76,22 +78,22 @@ rb==1.7                   # via sentry
 redis-py-cluster==1.3.4
 redis==2.10.5             # via rb, redis-py-cluster, sentry
 requests-oauthlib==0.7.0  # via sentry-plugins
-requests[security]==2.12.5  # via percy, requests-oauthlib, sentry
+requests[security]==2.18.4  # via percy, requests-oauthlib, sentry
 s3transfer==0.1.9         # via boto3
 selenium==3.4.3           # via sentry
 sentry-auth-google==0.1.0
 sentry-plugins==8.10.0
-sentry==8.20.0
+sentry==8.22.0
 setproctitle==1.1.10      # via sentry
 simplejson==3.8.2         # via sentry
 six==1.10.0               # via cryptography, pyopenssl, python-dateutil, python-memcached, python-utils, qrcode, sentry, structlog
 sqlparse==0.1.19          # via sentry
 statsd==3.1               # via sentry
 structlog==16.1.0         # via sentry
-symsynd==3.2.0            # via sentry
+symbolic==1.1.5           # via sentry
 toronado==0.0.11          # via sentry
 twisted==16.4.1
 ua-parser==0.7.1          # via sentry
-urllib3==1.16             # via sentry
+urllib3==1.22             # via requests, sentry
 uwsgi==2.0.14             # via sentry
 zope.interface==4.3.2     # via twisted
