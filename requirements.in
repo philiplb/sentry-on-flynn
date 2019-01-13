@@ -6,7 +6,7 @@ django-storages
 ndg-httpsclient  # required by requests
 psycopg2
 redis-py-cluster==1.3.4
-sentry==8.22.0
+sentry==9.0.0
 sentry-auth-google
 twisted
 sentry-plugins
