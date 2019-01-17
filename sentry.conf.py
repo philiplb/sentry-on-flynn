@@ -271,6 +271,19 @@ GITHUB_EXTENDED_PERMISSIONS = ['repo']
 BITBUCKET_CONSUMER_KEY = os.environ.get('BITBUCKET_CONSUMER_KEY')
 BITBUCKET_CONSUMER_SECRET = os.environ.get('BITBUCKET_CONSUMER_SECRET')
 
+#######
+# SSO #
+#######
+
+# Basic SSO enabled by default. Advanced features must be turned ON.
+# Official Documentation: https://docs.sentry.io/server/sso/
+# The 'GOOGLE_CLIENT_ID' and 'GOOGLE_CLIENT_SECRET' are specified below (see: Social Auth).
+
+if 'ENABLE_ORGANIZATIONS_SSO' in os.environ:
+    SENTRY_FEATURES['organizations:sso'] = True
+    SENTRY_FEATURES['organizations:sso-saml2'] = True
+    SENTRY_FEATURES['organizations:sso-rippling'] = True
+
 ########
 # etc. #
 ########
