@@ -91,7 +91,7 @@ requests[security]==2.18.4  # via percy, querystring-parser, requests-oauthlib, 
 s3transfer==0.1.9         # via boto3
 selenium==3.11.0          # via sentry
 semaphore==0.1.3          # via sentry
-sentry-auth-google==0.1.0
+sentry-auth-google==0.2.0
 sentry-plugins==8.10.0
 sentry==9.0.0
 setproctitle==1.1.10      # via sentry
