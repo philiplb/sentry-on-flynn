@@ -27,3 +27,9 @@ After you have upgraded Sentry via a newer version of this repository, run the d
 ```text
 flynn run sentry --config=sentry.conf.py upgrade
 ```
+
+## Upgrading the Sentry Version of this Repository
+
+```bash
+pip-compile -v --output-file requirements.txt requirements.in
+```
