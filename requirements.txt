@@ -27,6 +27,7 @@ django-crispy-forms==1.4.0  # via sentry
 django-jsonfield==0.9.13  # via sentry
 django-picklefield==0.3.2  # via sentry
 django-secure==1.0.1
+django-storages-redux==1.3.3
 django-storages==1.5.1
 django-sudo==2.1.0        # via sentry
 django-templatetag-sugar==1.0  # via sentry
