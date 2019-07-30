@@ -68,6 +68,7 @@ phabricator==0.7.0        # via sentry-plugins
 pillow==3.2.0             # via sentry
 pluggy==0.6.0             # via pytest
 progressbar2==3.10.1      # via sentry
+psycopg2-binary==2.7.7    # via sentry
 psycopg2==2.6.2
 py-bcrypt==0.4            # via django-bcrypt
 py==1.7.0                 # via pytest
@@ -96,9 +97,9 @@ s3transfer==0.1.13        # via boto3
 selenium==3.141.0         # via sentry
 semaphore==0.4.27         # via sentry
 sentry-auth-google==0.2.0
-sentry-plugins==9.1.1
+sentry-plugins==9.1.2
 sentry-sdk==0.7.10        # via sentry
-sentry==9.1.1
+sentry==9.1.2
 setproctitle==1.1.10      # via sentry
 simplejson==3.8.2         # via sentry
 six==1.10.0               # via cryptography, mock, more-itertools, parsimonious, pyopenssl, pytest, python-dateutil, python-memcached, python-utils, qrcode, sentry, structlog
